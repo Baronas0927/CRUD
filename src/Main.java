@@ -8,19 +8,19 @@ public class Main {
         while (true)
         {
             System.out.println("-------------------------");
-            System.out.println("Prekiu krepselis");
-            System.out.println("1. Ivesti prekes");
+            System.out.println("Prekių krepšelis");
+            System.out.println("1. Įvesti prekes");
             System.out.println("2. Rodyti prekes");
             System.out.println("3. Redaguoti prekes");
-            System.out.println("4. Istrinti prekes");
-            System.out.println("5. Iseiti is programos");
+            System.out.println("4. Ištrinti prekes");
+            System.out.println("5. Išeiti iš programos");
             System.out.println("-------------------------");
             int item = sc.nextInt();
             sc.nextLine();
             switch (item){
                 case 1:
                     //padaroma galimybė įvesti skaičių
-                    System.out.println("Ivesti preke: ");
+                    System.out.println("Įvesti prekę: ");
                     String input = sc.nextLine();
                     shoppingList.add(input);
                     break;
@@ -32,21 +32,21 @@ public class Main {
                     break;
                 case 3:
                     //padaroma galimybė redaguoti prekes
-                    System.out.println("iveskite preke kuria norite redaguoti:");
+                    System.out.println("Įveskite prekę kurią norite redaguoti:");
                      input = sc.nextLine();
                     for (int i = 0; i < shoppingList.size(); i++) {
                         if(shoppingList.get(i).equals(input)){
-                            System.out.println("iveskite nauja pavadinima:");
+                            System.out.println("Įveskite naują pavadinimą:");
                             shoppingList.set(i, sc.nextLine());
                         }
                     }
                 case 4:
                     //padaroma galimybė ištrinti prekes
-                    System.out.println("Iveskite preke kuria norite istrinti");
+                    System.out.println("Įveskite prekę, kurią norite ištrinti: ");
                     input = sc.nextLine();
                     for (int i = 0; i < shoppingList.size(); i++) {
                         if (shoppingList.get(i).equals(input)){
-                            System.out.println("istrinama");
+                            System.out.println("Ištrinama");
                             shoppingList.clear();
                         }
                     }
